@@ -97,7 +97,14 @@
   services.flatpak.enable = true;
 
   # to install hyprland
-  programs.hyprland.enable = true;
+  #programs.hyprland.enable = true;
+
+  programs.hyprland = {
+    enable = true;
+  };
+  programs.hyprland.xwayland = {
+    enable = true;
+  };
 
   # to set zsh as default shell
   programs.zsh.enable = true;
@@ -106,22 +113,53 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-     wget
-     kitty
-     fastfetch
-     telegram-desktop
-     zoom-us
-     yazi
-	lunarvim
-	neovim
-  starship
-  git
-  rnote
-  qbittorrent
-  appeditor
-  steam
-  gnome-software
+    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    wget 
+    kitty
+    fastfetch
+    telegram-desktop
+    zoom-us
+    yazi
+	  lunarvim
+	  neovim
+    starship
+    git
+    rnote
+    qbittorrent
+    appeditor
+    steam
+    gnome-software
+    blueman
+    brightnessctl
+    cmake
+    gcc
+    fzf
+    flameshot
+    gtk3
+    hyprland
+    hyprpaper
+    hyprpicker
+    meson
+    obs-studio
+      (pkgs.wrapOBS {
+        plugins = with pkgs.obs-studio-plugins; [
+          wlrobs
+        ];
+      })
+    scrot
+    pipewire
+    qt5.qtwayland
+    qt6.qmake
+    qt6.qtwayland
+    rofi-wayland
+    waybar
+    wl-color-picker
+    wlroots
+    xdg-desktop-portal-hyprland
+    xdg-desktop-portal-gtk
+    xdg-utils
+    xwayland
+    lazygit
   ];
 
 
@@ -140,23 +178,46 @@ programs.steam = {
 };
 
 #enabling flakes
-nix.settings.experimental-features = [
-  "nix-command"
-  "flakes"
-];
+#nix.settings.experimental-features = [
+#  "nix-command"
+#  "flakes"
+#];
+
+#garbage collector
+nix = {
+  #settings.auto-optimize-store = true;
+  gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 7d";
+  };
+};
+
+#for finding packages
+services.locate = {
+  enable = true;
+  locate = pkgs.mlocate;
+};
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
+   programs.gnupg.agent = {
+     enable = true;
+     enableSSHSupport = true;
+   };
 
   # List services that you want to enable:
+  services.dbus.enable = true;
+  xdg.portal = {
+    enable = true;
+    extraPortals = [
+    pkgs.xdg-desktop-portal-gtk
+    ];
+  };
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+   services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
@@ -171,5 +232,4 @@ nix.settings.experimental-features = [
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.11"; # Did you read the comment?
-
 }
