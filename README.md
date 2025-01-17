@@ -50,3 +50,9 @@ And the final step is to build your system:
     # nixos-rebuild switch
 ```
 And just like that you have simple system that you can mess with! Congrats!
+
+## Credits
+For hyprland inspiration was taken from fedora-hyprland by @Ja.KooLit repo: https://github.com/JaKooLit/Fedora-Hyprland
+wallpapers and waybar config were taken from the same place, thank you very much!
+
+For app launcher I used rofi-wayland with rofi by @adi1090x repo: https://github.com/adi1090x/rofi huge colletion, thank you very much!
