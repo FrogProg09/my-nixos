@@ -116,18 +116,9 @@
     wget 
     kitty
     fastfetch
-    telegram-desktop
-    zoom-us
-    yazi
 	  lunarvim
-	  neovim
     starship
     git
-    rnote
-    qbittorrent
-    appeditor
-    steam
-    gnome-software
     blueman
     brightnessctl
     cmake
@@ -138,7 +129,6 @@
     hyprland
     hyprpaper
     hyprpicker
-    meson
     obs-studio
       (pkgs.wrapOBS {
         plugins = with pkgs.obs-studio-plugins; [
@@ -158,7 +148,6 @@
     xdg-desktop-portal-gtk
     xdg-utils
     xwayland
-    lazygit
   ];
 
 
@@ -166,15 +155,6 @@
 fonts.packages = with pkgs; [ 
 	nerdfonts # installs most of the nerdfonts
 ];
-
-#to install steam correctly
-
-programs.steam = {
-  enable = true;
-  remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-  dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-  localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
-};
 
 #enabling flakes
 #nix.settings.experimental-features = [
