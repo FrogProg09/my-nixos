@@ -3,7 +3,9 @@
 ## What is this?
 This is my simple NixOS config which you can install easily on fresh nixOS and try this out!
 
-
+![Image](https://github.com/user-attachments/assets/e71be755-25be-45cd-adeb-ea288ca4510e)
+![Image](https://github.com/user-attachments/assets/13b306a0-8767-4852-b117-715c4192b78c)
+![Image](https://github.com/user-attachments/assets/43fbb602-58ab-4cab-a376-aef817d79ce9)
 
 ## What does it include?
 My configuration includes:
