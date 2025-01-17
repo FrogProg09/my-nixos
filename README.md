@@ -20,7 +20,7 @@ My configuration includes:
 So, I am still a total newbie at nixos, so i might be doing everything in a very wrong or very simple way, so that is why this repo is still in progress!
 
 This is MY configs, so before running .sh script you might WANT to mess with configuration.nix file!
-1. You might want to backup yours configs somewhere! Because my script will erase your's configuration.nix and hardware-configuration.nix files.
+1. You might want to backup yours configs somewhere! Because my script will erase your's configuration.nix file.
 2. Because of the first one, you also might want to change configuration.nix in repo:
     
     1 set up your user back on 80 line
