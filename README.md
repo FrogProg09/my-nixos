@@ -49,7 +49,14 @@ And the final step is to build your system:
 ```nix
     # nixos-rebuild switch
 ```
-And just like that you have simple system that you can mess with! Congrats!
+
+After that you wanna reboot
+```bash
+    $ reboot
+```
+Make sure to choose the newest generation.
+
+And just like that you have simple working system that you can start messing with! Congrats!
 
 ## Credits
 For hyprland inspiration was taken from fedora-hyprland by @Ja.KooLit repo: https://github.com/JaKooLit/Fedora-Hyprland
