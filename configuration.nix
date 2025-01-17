@@ -125,8 +125,7 @@
     git
     rnote
     qbittorrent
-    appeditor
-    steam
+    #steam
     gnome-software
     blueman
     brightnessctl
@@ -169,12 +168,12 @@ fonts.packages = with pkgs; [
 
 #to install steam correctly
 
-programs.steam = {
-  enable = true;
-  remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-  dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-  localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
-};
+#programs.steam = {
+# enable = true;
+#  remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+# dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+#  localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
+#};
 
 #enabling flakes
 #nix.settings.experimental-features = [
