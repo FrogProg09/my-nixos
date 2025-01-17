@@ -26,3 +26,11 @@ cp ~/my-nixos/DOTFILES/.config/starship.toml ~/.config/
 # also putting wallpapers directory to ~/Pictures/
 
 mv wallpapers ~/Pictures/
+
+# for working rofi
+
+git clone --depth=1 https://github.com/adi1090x/rofi.git
+cd rofi
+chmod +x setup.sh
+./setup.sh
+
