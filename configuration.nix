@@ -97,7 +97,6 @@
   services.flatpak.enable = true;
 
   # to install hyprland
-  #programs.hyprland.enable = true;
 
   programs.hyprland = {
     enable = true;
