@@ -2,11 +2,9 @@
 
 # deleting yours deafult configs that u have
 rm /etc/nixos/configuration.nix
-rm /etc/nixos/hardware-configuration.nix
 
 # installing config of nixos from this repo
 cp configuration.nix /etc/nixos/
-cp hardware-configuration.nix /etc/nixos/
 
 #deleting deafult configs of programs in case they exist
 rm -r ~/.config/hypr/
@@ -29,6 +27,7 @@ mv wallpapers ~/Pictures/
 
 # for working rofi
 
+cd
 git clone --depth=1 https://github.com/adi1090x/rofi.git
 cd rofi
 chmod +x setup.sh
