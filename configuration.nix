@@ -158,6 +158,9 @@
     xdg-utils
     xwayland
     lazygit
+    hyprshot
+    btop
+    bsnes-hd
   ];
 
 

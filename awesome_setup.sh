@@ -4,14 +4,29 @@
 rm /etc/nixos/configuration.nix
 
 # installing config of nixos from this repo
-cp configuration.nix /etc/nixos/
+cp ~/my-nixos/configuration.nix /etc/nixos/
 
 #deleting deafult configs of programs in case they exist
-rm -r ~/.config/hypr/
-rm -r ~/.config/waybar/
-rm -r ~/.config/kitty/
-rm -r ~/.config/lvim/
-rm ~/.config/starship.toml
+if test -d ~/.config/hypr/; then
+  echo "~/.config/hypr/ directory exists, deleting..."
+  rm -r ~/.config/hypr/
+fi
+if test -d ~/.config/waybar/; then
+  echo "~/.config/waybar/ directory exists, deleting..."
+  rm -r ~/.config/waybar/
+fi
+if test -d ~/.config/kitty/; then
+  echo "~/.config/kitty/ directory exists, deleting..."
+  rm -r ~/.config/kitty/
+fi
+if test -d ~/.config/lvim/; then
+  echo "~/.config/lvim/ directory exists, deleting..."
+  rm -r ~/.config/lvim/
+fi
+if test -f ~/.config/starship.toml; then
+  echo "~/.config/starship.toml file exists, deleting..."
+  rm ~/.config/starship.toml
+fi
 
 # installing configs of programs from this repo
 
