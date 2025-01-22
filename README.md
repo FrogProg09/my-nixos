@@ -12,11 +12,15 @@ My configuration includes:
 1. Hyprland (pretty basic configuration)
 2. Gdm (as a display manager)
 3. Gnome (i guess i will delete it later)
+4. Zsh (Z-shell)
+5. Lunarvim (Fork of neovim)
 
 ### IMPORTANT
 
+So, I am still a total newbie at nixos, so i might be doing everything in a very wrong or very simple way, so that is why this repo is still in progress!
+
 This is MY configs, so before running .sh script you might WANT to mess with configuration.nix file!
-1. You might want to backup yours configs somewhere! Because my script will erase your's configuration.nix and hardware-configuration.nix files.
+1. You might want to backup your configs somewhere! Because my script will erase your's configuration.nix file and some configs from ~/.config/ directory.
 2. Because of the first one, you also might want to change configuration.nix in repo:
     
     1 set up your user back on 80 line
@@ -49,14 +53,14 @@ And the final step is to build your system:
 ```nix
     # nixos-rebuild switch
 ```
-
-After that you wanna reboot
+After all of it you wanna reboot:
 ```bash
     $ reboot
 ```
-Make sure to choose the newest generation.
 
-And just like that you have simple working system that you can start messing with! Congrats!
+Than in gdm choose hyprland, and you are good to go!
+
+And just like that you have simple system that you can mess with! Congrats!
 
 ## Credits
 For hyprland inspiration was taken from fedora-hyprland by @Ja.KooLit repo: https://github.com/JaKooLit/Fedora-Hyprland
