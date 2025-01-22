@@ -4,7 +4,7 @@
 if test -f /etc/nixos/configuration.nix; then  # checking if configuration.nix file exists
 
   echo "found configuration.nix, deleting..."
-  rm /etc/nixos/configuration.nix
+  sudo rm /etc/nixos/configuration.nix
 
   if [ $? -eq 0 ]; then   # checking if last executed command was successful
     echo "old configuration.nix was successfully removed"
@@ -14,7 +14,7 @@ if test -f /etc/nixos/configuration.nix; then  # checking if configuration.nix f
   fi
 
   echo "copying configuration.nix from this repo..."
-  cp ~/my-nixos/configuration.nix /etc/nixos/
+  sudo cp ~/my-nixos/configuration.nix /etc/nixos/
 
   if [ $? -eq 0 ]; then   # checking if last executed command was successful
     echo "Installed configuration.nix successfully"
@@ -26,7 +26,7 @@ if test -f /etc/nixos/configuration.nix; then  # checking if configuration.nix f
 else
 
   echo "Did not find configuration.nix, copying from this repo..."
-  cp ~/my-nixos/configuration.nix /etc/nixos/
+  sudo cp ~/my-nixos/configuration.nix /etc/nixos/
   
   if [ $? -eq 0 ]; then   # checking if last executed command was successful
     echo "Installed configuration.nix successfully"
