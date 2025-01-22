@@ -117,15 +117,10 @@
     kitty
     fastfetch
     telegram-desktop
-    zoom-us
     yazi
 	  lunarvim
-	  neovim
     starship
     git
-    rnote
-    qbittorrent
-    #steam
     gnome-software
     blueman
     brightnessctl
@@ -160,7 +155,6 @@
     lazygit
     hyprshot
     btop
-    bsnes-hd
   ];
 
 
