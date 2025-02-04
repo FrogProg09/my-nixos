@@ -126,9 +126,6 @@
     fzf
     flameshot
     gtk3
-    hyprland
-    hyprpaper
-    hyprpicker
     obs-studio
       (pkgs.wrapOBS {
         plugins = with pkgs.obs-studio-plugins; [
@@ -148,6 +145,15 @@
     xdg-desktop-portal-gtk
     xdg-utils
     xwayland
+    hyprland
+    hyprpaper
+    hyprpicker
+    hyprshot
+    hyprlock
+    hypridle
+    hyprlang
+    hyprpolkitagent
+    mako
   ];
 
 

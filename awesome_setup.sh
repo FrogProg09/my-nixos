@@ -62,6 +62,12 @@ if test -d ~/.config/lvim/; then
   rm -r ~/.config/lvim/
 
 fi
+if test -d ~/.config/mako/; then
+  
+  echo "~/.config/mako/ directory exists, deleting... (づ ◕‿◕ )づ"
+  rm -r ~/.config/mako/
+
+fi
 if test -f ~/.config/starship.toml; then
 
   echo "~/.config/starship.toml file exists, deleting... (づ ◕‿◕ )づ"
@@ -76,6 +82,7 @@ cp -r ~/my-nixos/DOTFILES/.config/hypr/ ~/.config/
 cp -r ~/my-nixos/DOTFILES/.config/waybar/ ~/.config/
 cp -r ~/my-nixos/DOTFILES/.config/kitty/ ~/.config/
 cp -r ~/my-nixos/DOTFILES/.config/lvim/ ~/.config/
+cp -r ~/my-nixos/DOTFILES/.config/mako/ ~/.config/
 cp ~/my-nixos/DOTFILES/.config/starship.toml ~/.config/
 
 # also putting wallpapers directory to ~/Pictures/
@@ -89,6 +96,12 @@ else
   echo "Moving wallpapers to Pictures directory... (づ ◕‿◕ )づ"
   mv wallpapers ~/Pictures/
 fi
+
+# Moving .face file to home directory for hyprlock
+
+echo "Moving .face file to home directory."
+mv ~/my-nixos/.face ~/
+echo "If you want different avatar on your lock screen, replace it with another .face file"
 
 # for working rofi
 
