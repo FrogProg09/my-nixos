@@ -42,7 +42,7 @@ if test -d ~/.config/hypr/; then
   
   echo "~/.config/hypr/ directory exists, deleting... (づ ◕‿◕ )づ"
   rm -r ~/.config/hypr/
-  
+
 fi
 if test -d ~/.config/waybar/; then
 
@@ -74,6 +74,15 @@ if test -f ~/.config/starship.toml; then
   rm ~/.config/starship.toml
 
 fi
+
+# creating clean directories
+
+echo "creating clean directories"
+mkdir -p ~/.config/hypr/
+mkdir -p ~/.config/waybar/
+mkdir -p ~/.config/kitty/
+mkdir -p ~/.config/lvim/
+mkdir -p ~/.config/mako/
 
 # installing configs of programs from this repo
 
