@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # deleting yours deafult configs that u have and copying from this repo
 if test -f /etc/nixos/configuration.nix; then  # checking if configuration.nix file exists
